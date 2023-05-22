@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personality Discovery</title>
+  <style>
+    .question-box {
+      border: 1px solid #000;
+      padding: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Personality Discovery</h1>
+  <div id="questionContainer">
+    <!-- Questions will be inserted here -->
+  </div>
+  
+  <button onclick="calculateResult()">Submit</button>
+
+  <script>
+    fetch('questions.json')
+    .then(response => response.json())
+    .then(questions => {
+  // Rest of your JavaScript code goes here
+});
+
+
+    // Dynamically add questions to the page
+    var questionContainer = document.getElementById('questionContainer');
+    questions.forEach(function(question, index) {
+        var questionBox = document.createElement('div');
+        questionBox.className = 'question-box';
+        questionBox.innerHTML = '<h2>' + question.title + '</h2>';
+
+        question.options.forEach(function(option, optionIndex) {
+            var optionLabel = document.createElement('label');
+            optionLabel.innerText = option;
+
+            var optionInput = document.createElement('select');
+            optionInput.id = 'q' + index + 'o' + optionIndex;  // Create a unique id for each option
+            ['L', '1', '2', '3', '4', '5', 'M'].forEach(function(choice) {
+                var optionChoice = document.createElement('option');
+                optionChoice.value = choice;
+                optionChoice.innerText = choice;
+                optionInput.appendChild(optionChoice);
+            });
+
+            questionBox.appendChild(optionLabel);
+            questionBox.appendChild(optionInput);
+        });
+
+        questionContainer.appendChild(questionBox);
+    });
+
+    // Calculate result based on user input
+    function calculateResult() {
+        var results = [];
+        questions.forEach(function(question, index) {
+            var questionResult = [];
+            question.options.forEach(function(option, optionIndex) {
+                var selectedValue = document.getElementById('q' + index + 'o' + optionIndex).value;
+                questionResult.push(selectedValue);
+            });
+            results.push(questionResult);
+        });
+        console.log(results);  // This will log the results to the console, modify this line to handle the results as needed
+    }
+  </script>
+</body>
+</html>
+
