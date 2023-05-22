@@ -1,0 +1,57 @@
+var questions = [
+    {
+      "title": "Question 1",
+      "options": [
+        "Is being patient and supportive your personality? (Earth Green)",
+        "Is being direct and to the point your personality? (Fiery Red)",
+        "Is being well-prepared and thorough your personality? (Cool Blue)",
+        "Is being friendly and sociable your personality? (Sunshine Yellow)"
+      ]
+    },
+    {
+      "title": "Question 2",
+      "options": [
+        "Do you slow down to their pace? (Earth Green)",
+        "Do you focus on results and objectives? (Fiery Red)",
+        "Do you put important things in writing? (Cool Blue)",
+        "Are you entertaining and stimulating? (Sunshine Yellow)"
+      ]
+    },
+    {
+      "title": "Question 3",
+      "options": [
+      "Do you ask their opinion and give them time to answer? (Earth Green)",
+      "Are you brief, bright, and gone? (Fiery Red)",
+      "Do you let them consider all the details? (Cool Blue)",
+      "Are you open and flexible? (Sunshine Yellow)"
+      ]
+    }
+    {
+        "title": "Question 4",
+        "options": [
+        "Do you avoid taking advantage of their good nature? (Earth Green)",
+        "Do you avoid hesitation or waffling? (Fiery Red)",
+        "Do you avoid invading their personal space? (Cool Blue)",
+        "Do you avoid boring them with details? (Sunshine Yellow)"
+        ]
+    }
+    {
+        "title": "Question 5",
+        "options": [
+        "Do you avoid pushing them to make quick decisions? (Earth Green)",
+        "Do you avoid focusing on feelings? (Fiery Red)",
+        "Do you avoid being flippant on important issues? (Cool Blue)",
+        "Do you avoid tying them down with routine? (Sunshine Yellow)"
+        ]
+    }
+    {
+        "title": "Question 6",
+        "options": [
+        "Do you avoid springing last-minute surprises? (Earth Green)",
+        "Do you avoid trying to take over? (Fiery Red)",
+        "Do you avoid changing their routine without notice? (Cool Blue)",
+        "Do you avoid asking them to do things alone? (Sunshine Yellow)"
+        ]
+    }
+  ];
+  
